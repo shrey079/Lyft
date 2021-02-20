@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate')%>
+<div class="row"> 
+    <h1 class="text-center">Edit gym</h1>
+    <div class="col-6 offset-3">
+        <form action="/gyms/<%=gym._id%>?_method=PUT" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title:</label>
+                <input class="form-control" type="text" value="<%=gym.title %>" id="title" name="gym[title]">    
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="price">Price:</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" id="price" name="gym[price]" class="form-control" aria-label="price" 
+                    value="<%=gym.price %>" aria-describedby="price-label">
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-label" for="rating">Rating:</label>
+                <input class="form-control" type="text" id="rating" name="gym[rating]" 
+                value="<%=gym.rating %>">    
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text" id="location" name="gym[location]" 
+                value="<%=gym.location %>">    
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description:</label>
+                <textarea class="form-control" type="text" id="description" 
+                name="gym[description]"><%=gym.description %></textarea>    
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="image">Image URL: (https://source.unsplash.com/collection/11398809) </label>
+                <input class="form-control" type="text" id="image" name="gym[image]" 
+                value="https://source.unsplash.com/collection/11398809">    
+            </div>
+            <button class="btn btn-primary">Update gym</button>
+        </form> 
+
+        <a href="/gyms/<%= gym._id %>">Back to gym</a>
+    </div>
+</div>
+

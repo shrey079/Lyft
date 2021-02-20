@@ -1,0 +1,19 @@
+{
+  "name": "hoopbuddy",
+  "version": "1.0.0",
+  "description": "An application made to help basketball players find courts near them",
+  "main": "app.js",
+  "scripts": {
+    "test": "'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "lorem-ipsum": "^2.0.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.14"
+  }
+}

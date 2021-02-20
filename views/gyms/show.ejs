@@ -1,0 +1,14 @@
+<% layout('layouts/boilerplate')%>
+<h1><%= gym.title %></h1>       
+<h2><%= gym.location %> </h2>
+<img src="<%= gym.image %>" alt="bball">
+<p><%= gym.description %></p>
+<p>Rating <%= gym.rating %>/10</p>
+<p>Price $<%= gym.rating %></p>
+
+<p>
+    <a href="/gyms/<%=gym._id%>/edit">Edit</a>
+    <form action="/gyms/<%= gym._id %>?_method=DELETE" method="POST">
+        <button>Delete</button> 
+    </form>
+</p>
